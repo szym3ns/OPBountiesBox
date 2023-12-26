@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\WantedPosterAbstractController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/users', function (Request $request) {
-    echo 1;
+Route::prefix('/v1')->group(function (): void {
+    Route::get('/wanted-posters', [WantedPosterAbstractController::class, 'getAllWantedPosters']);
 });

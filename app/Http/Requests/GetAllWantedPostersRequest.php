@@ -6,12 +6,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GetWantedPosterRequest extends FormRequest
+class GetAllWantedPostersRequest extends FormRequest
 {
     public function rules(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 }
