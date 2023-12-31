@@ -8,7 +8,7 @@ use App\Http\Requests\GetAllWantedPostersRequest;
 use App\Services\WantedPoster\WantedPosterService;
 use Illuminate\Http\Response;
 
-final class WantedPosterAbstractController extends AbstractController
+final class WantedPosterController extends AbstractController
 {
     public function __construct(
         private readonly WantedPosterService $wantedPosterService,
@@ -19,5 +19,10 @@ final class WantedPosterAbstractController extends AbstractController
         return $this->buildResponse(
             $this->wantedPosterService->getAllWantedPosters()
         );
+    }
+
+    public function getWantedPoster()
+    {
+
     }
 }
