@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -8,21 +10,15 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('wanted_posters', function (Blueprint $table): void {
+        Schema::create('dictionary.wanted_poster_types', function (Blueprint $table): void {
             $table
                 ->id();
 
             $table
-                ->boolean('enabled');
+                ->string('name');
 
             $table
-                ->integer('type_id');
-
-            $table
-                ->string('character_name');
-
-            $table
-                ->bigInteger('amount');
+                ->string('short_name');
 
             $table
                 ->integer('created_by');
@@ -32,17 +28,9 @@ return new class extends Migration
                 ->nullable();
 
             $table
-                ->text('photo_base64');
-
-            $table
                 ->timestamps();
 
             // Foreign keys
-            $table
-                ->foreign('type_id')
-                ->on('dictionary.wanted_poster_types')
-                ->references('id');
-
             $table
                 ->foreign('created_by')
                 ->on('users')
@@ -57,6 +45,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('wanted_posters');
+        Schema::dropIfExists('dictionary.wanted_poster_types');
     }
 };

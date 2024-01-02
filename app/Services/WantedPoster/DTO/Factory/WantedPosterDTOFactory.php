@@ -15,6 +15,7 @@ final class WantedPosterDTOFactory
     {
         return new WantedPosterDTO(
             $model->getId(),
+            $model->getType(),
             $model->getCharacterName(),
             $model->getAmount()
         );
