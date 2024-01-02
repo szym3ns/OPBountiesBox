@@ -20,8 +20,9 @@ final class WantedPosterDTOFactory
         );
     }
 
-    public static function createCollectionFromEloquentCollection(EloquentCollection $collection): WantedPosterDTOCollection
-    {
+    public static function createCollectionFromEloquentCollection(
+        EloquentCollection $collection
+    ): WantedPosterDTOCollection {
         return WantedPosterDTOCollection::createFromIlluminateCollection(
             $collection->map(
                 fn (WantedPoster $model) => self::createFromModel($model)

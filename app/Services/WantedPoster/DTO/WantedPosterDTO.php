@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace App\Services\WantedPoster\DTO;
 
-final class WantedPosterDTO
+use App\Common\SerializableInterface;
+use App\Common\SerializableTrait;
+
+final class WantedPosterDTO implements SerializableInterface
 {
+    use SerializableTrait;
+    
     public function __construct(
         public readonly int $id,
         public readonly string $characterName,
