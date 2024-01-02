@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Services\WantedPoster;
 
-use App\Repositories\WantedPosterQueryRepository;
 use App\Services\WantedPoster\DTO\WantedPosterDTOCollection;
+use App\Services\WantedPoster\Repository\WantedPosterQueryRepository;
 
 final class WantedPosterService
 {

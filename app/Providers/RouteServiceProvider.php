@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
+    private const AUTH_API_PATTERNS = [
+        '/api/v1/' => 'api.php',
+    ];
+
     public const HOME = '/home';
 
     public function boot(): void
@@ -22,9 +26,11 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         $this->routes(function (): void {
-            Route::middleware('api')
-                ->prefix('api')
-                ->group(base_path('routes/api.php'));
+            foreach (self::AUTH_API_PATTERNS as $prefix => $fileName) {
+                Route::middleware('api')
+                    ->prefix($prefix)
+                    ->group(base_path("routes/$fileName"));
+            }
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));

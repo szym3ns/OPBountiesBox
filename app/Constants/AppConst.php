@@ -6,5 +6,5 @@ namespace App\Constants;
 
 final class AppConst
 {
-    public const API_TOKEN_ENV_KEY = 'api_token';
+    public const API_TOKEN_CONFIG_KEY = 'app_api_token';
 }

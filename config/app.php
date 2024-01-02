@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Constants\AppConst;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
@@ -187,5 +188,5 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
-    'api_token' => env('API_TOKEN'),
+    AppConst::API_TOKEN_CONFIG_KEY => env('APP_API_TOKEN'),
 ];
