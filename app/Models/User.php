@@ -28,4 +28,9 @@ final class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getId(): int
+    {
+        return $this->getAttribute('id');
+    }
 }
