@@ -1,0 +1,5 @@
+description: Get wanted poster details by id.
+content:
+  application/json:
+    schema:
+      $ref: ../components/OkResponse.yml

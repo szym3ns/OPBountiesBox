@@ -1,0 +1,5 @@
+description: Invalid authorization header.
+content:
+  application/json:
+    schema:
+      $ref: ../components/UnauthorizedResponse.yml

@@ -1,0 +1,19 @@
+{
+    "name": "opbountiesbox-docs",
+    "version": "1.0.0",
+    "dependencies": {
+        "@redocly/cli": "^1.0.0-beta.127",
+        "prism-cli": "^0.5.3",
+        "swagger-cli": "^4.0.4"
+    },
+    "private": true,
+    "engines": {
+        "node": ">=16"
+    },
+    "engineStrict": true,
+    "license": "proprietary",
+    "scripts": {
+        "build-api": "redocly build-docs openapi/api.yml --output=public/index.html",
+        "lint-api": "redocly lint openapi/api.yml"
+    }
+}

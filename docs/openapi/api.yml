@@ -1,0 +1,23 @@
+openapi: '3.1'
+servers:
+# TODO: Production settings
+#  - url: http://production
+#    description: Production app
+  - url: http://localhost
+    description: Application running locally
+info:
+  version: 1.0.0
+  title: OPBountiesBox documentation API
+  description: API documentation for OPBountiesBox
+  license:
+    name: Apache 2.0
+    identifier: Apache-2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+security: []
+components:
+  securitySchemes:
+    AuthorizationApiToken:
+      $ref: ./security/authorization-api-token.yml
+paths:
+  /api/v1/wanted-posters/{id}:
+    $ref: ./routes/api_v1_wanted_posters_{id}.yml

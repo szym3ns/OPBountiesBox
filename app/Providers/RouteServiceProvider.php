@@ -26,6 +26,9 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         $this->routes(function (): void {
+            Route::prefix('/api/v1/openapi')
+                ->group(base_path('routes/openapi.php'));
+
             foreach (self::AUTH_API_PATTERNS as $prefix => $fileName) {
                 Route::middleware('api')
                     ->prefix($prefix)

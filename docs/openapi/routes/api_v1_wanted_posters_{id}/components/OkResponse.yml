@@ -1,0 +1,33 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 12
+  enabled:
+    type: boolean
+    example: true
+  type:
+    type: string
+    example: dead or alive
+    enum: [only alive, dead or alive]
+  characterName:
+    type: string
+    example: Monkey D. Luffy
+  amount:
+    type: integer
+    example: 3000000
+  createdBy:
+    type: integer
+    example: 1
+  updatedBy:
+    type: [integer, 'null']
+    example: 'null'
+  createdAt:
+    type: string
+    example: '2024-01-15 22:00:00'
+  updatedAt:
+    type: [string, 'null']
+    example: 'null'
+  photoHash:
+    type: string
+    example: 2b923f57a4603fc73ab182b3f93567f20f6aeb9bc9c4c6777366063f5e197ac5

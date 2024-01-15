@@ -1,0 +1,15 @@
+get:
+  tags:
+    - Wanted posters
+  operationId: "GET_api_v1_wanted_posters_by_id"
+  security:
+    - AuthorizationApiToken: [ ]
+  description: Get wanted poster details by id.
+  summary: /api/v1/wanted_posters/{id}
+  parameters:
+    $ref: ./api_v1_wanted_posters_{id}/requests/parameters.yml
+  responses:
+    '200':
+      $ref: ./api_v1_wanted_posters_{id}/response/200.yml
+    '401':
+      $ref: ./common/response/401.yml
