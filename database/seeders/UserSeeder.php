@@ -16,7 +16,7 @@ final class UserSeeder extends Seeder
             ['name' => 'system'],
             [
                 'id' => 1,
-                'email' => 'horbalszymon@gmail.com',
+                'email' => 'szymoniction@gmail.com',
                 'password' => Hash::make('password'),
                 'created_at' => now(),
             ]
