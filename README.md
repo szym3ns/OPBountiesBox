@@ -37,3 +37,19 @@ and execute the following commands:
 # Dependency installation, generating an application key and starting migration with seeds
 composer install && php artisan key:generate && php artisan migrate --seed
 ```
+
+Now apllication is available at:
+```
+http://localhost
+```
+
+### OpenAPI documentation
+
+To generate OpenAPI documentation use following command inside docker container:
+```shell
+cd docs/ && npm install && npm run build-api
+```
+After executing the command, documentation is available at:
+```
+http://localhost/api/v1/openapi
+```
