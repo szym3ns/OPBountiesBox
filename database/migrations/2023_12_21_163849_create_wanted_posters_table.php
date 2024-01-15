@@ -32,7 +32,7 @@ return new class extends Migration
                 ->nullable();
 
             $table
-                ->text('photo_base64');
+                ->text('photo_hash');
 
             $table
                 ->timestamps();
