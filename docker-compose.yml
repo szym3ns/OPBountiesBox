@@ -1,6 +1,6 @@
 services:
     app:
-        container_name: opb_app
+        container_name: opbountiesbox_app
         build:
             context: ./dockerfiles
             dockerfile: Dockerfile
@@ -22,7 +22,7 @@ services:
         depends_on:
             - postgres
     postgres:
-        container_name: opb_postgres
+        container_name: opbountiesbox_postgres
         image: 'postgres:14'
         ports:
             - '${FORWARD_DB_PORT:-5432}:5432'
